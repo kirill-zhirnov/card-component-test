@@ -1,0 +1,36 @@
+{
+  "name": "card-component",
+  "version": "1.0.0",
+  "main": "index.js",
+	"author": "Kirill Zhirnov <ekvixgroup@gmail.com>",
+  "license": "MIT",
+  "private": false,
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "rm -rf ./dist && npx rollup --config rollup.prod.js --bundleConfigAsCjs",
+		"watch": "rm -rf ./dist && npx rollup --config rollup.prod.js --bundleConfigAsCjs --watch",
+		"lint": "npx eslint --ext .ts ./src/"
+	},
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.11.29",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
+    "rollup": "^4.13.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2"
+  }
+}
