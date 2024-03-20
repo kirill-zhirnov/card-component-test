@@ -69,7 +69,7 @@ class BasicView {
 
 class Card extends BasicView {
     render() {
-        let content = [];
+        const content = [];
         if (this.data.header) {
             content.push(`<h2 style="${this.data.headerStyles || ''}">${this.data.header}</h2>`);
         }

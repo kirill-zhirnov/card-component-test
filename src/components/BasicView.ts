@@ -17,7 +17,7 @@ export default class BasicView<Data extends object> {
 		if (typeof(selector) === 'function') {
 			callback = selector;
 			resolvedSelector = null;
- 		} else {
+		} else {
 			resolvedSelector = selector;
 		}
 
@@ -72,7 +72,7 @@ export default class BasicView<Data extends object> {
 
 		return new Proxy(data || this.data, {
 			get(target, key, receiver) {
-				return Reflect.get(target, key, receiver)
+				return Reflect.get(target, key, receiver);
 			},
 			set(target, key, val, receiver) {
 				const result = Reflect.set(target, key, val, receiver);

@@ -2,7 +2,7 @@ import BasicView from './BasicView';
 
 export default class Card extends BasicView<ICardData> {
 	render() {
-		let content = [];
+		const content = [];
 		if (this.data.header) {
 			content.push(`<h2 style="${this.data.headerStyles || ''}">${this.data.header}</h2>`);
 		}
@@ -19,4 +19,4 @@ export interface ICardData {
 	header?: string;
 	headerStyles?: string;
 	main?: string;
-};
+}
