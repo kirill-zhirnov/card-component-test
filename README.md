@@ -12,7 +12,7 @@
 
 Create a card component:
 
-```
+```js
 import {Card} from 'card-component';
 
 const component = new Card({
@@ -24,7 +24,7 @@ const component = new Card({
 
 Append component to a DOM element:
 
-```
+```js
 component1.appendTo(document.getElementById('your-container'));
 ```
 
@@ -32,26 +32,25 @@ component1.appendTo(document.getElementById('your-container'));
 
 Listen for all events related to a Card:
 
-```
+```js
 component1.on('click', (e) => console.log('clicked!', e));
 ```
 
 Listen events on children elements:
 
-```
+```js
 const component = new Card({
 	main: '<button class="to-red">To Red</button> - <button class="to-green">To Green</button>'
 });
 
 component.on('click', '.to-red', () => console.log('to red'));
 component.on('click', '.to-green', () => console.log('to green'));
-
 ```
 
 ## Data reactivity
 
 The data's properties can be mutated which cause to re-render:
 
-```
+```js
 component.data.header = 'the new value';
 ```
