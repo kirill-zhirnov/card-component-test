@@ -13,7 +13,7 @@
 Create a card component:
 
 ```js
-import {Card} from 'card-component';
+import {Card} from 'card-component-test';
 
 const component = new Card({
 	header: 'Hello Block 1',
